@@ -32,6 +32,10 @@ const Home = (getFormData) => {
         await axios.post('http://localhost:5000/new-mentor', item).then(getData())
     }
 
+    const onDeleteClick = async (item) => {
+        await axios.post('http://localhost:5000/delete-menti', { item }).then(getData())
+    }
+
     return (
         <>
             <Divider orientation="left">Menti-List</Divider>
@@ -55,6 +59,7 @@ const Home = (getFormData) => {
                             return (
                                 <List.Item>
                                     <Typography.Text mark>[MENTI]</Typography.Text> {item}
+                                    <Button onClick={() => onDeleteClick(item)} className={classes.deleteButton}>Delete Menti</Button>
                                     <Link to="/form" params={{ testvalue: "hello" }}><Button className={classes.formButton} onClick={() => getFormData(item)}>Check Form</Button></Link>
                                 </List.Item>
                             )

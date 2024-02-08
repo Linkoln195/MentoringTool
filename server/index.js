@@ -5,6 +5,7 @@ const students = require("./controllers/students");
 const newMentor = require("./controllers/newMentor");
 const formId = require("./controllers/formId");
 const formValue = require("./controllers/formValue");
+const deleteMenti = require("./controllers/deleteMenti");
 
 const app = express();
 
@@ -34,6 +35,10 @@ app.post("/login", (request, response) => {
 
 app.post("/new-mentor", (request, response) => {
     newMentor(request, response, client);
+});
+
+app.post("/delete-menti", (request, response) => {
+    deleteMenti(request, response, client);
 });
 
 app.get("/students-info", (request, response) => {
