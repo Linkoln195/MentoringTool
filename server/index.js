@@ -12,6 +12,7 @@ const app = express();
 const PORT = 5000;
 
 app.use(cors());
+express.use(cors());
 app.use(express.json());
 
 const MongoClient = require("mongodb").MongoClient;
