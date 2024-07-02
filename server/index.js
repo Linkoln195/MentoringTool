@@ -17,7 +17,7 @@ app.use(express.json());
 const MongoClient = require("mongodb").MongoClient;
 
 const url =
-    "mongodb+srv://admin:admin@cluster0.ftjs83x.mongodb.net/?retryWrites=true&w=majority";
+    "mongodb+srv://admin:admin@cluster0.ftjs83x.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 const client = new MongoClient(url);
 
 async function run() {
