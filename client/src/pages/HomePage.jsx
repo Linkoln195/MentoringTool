@@ -11,7 +11,7 @@ const Home = (getFormData) => {
     getFormData = getFormData.getFormData
 
     const getData = async () => {
-        await axios.get('http://localhost:5000/students-info')
+        await axios.get('https://mentoringtoolclient.onrender.com/students-info')
             .then((response) => {
                 setData(response.data)
             })
