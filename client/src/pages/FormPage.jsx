@@ -8,7 +8,7 @@ const Form = (formData) => {
     const [formValue, setFormValue] = useState(false)
 
     const getData = async (formID) => {
-        await axios.post('http://localhost:5000/form-value', { formID })
+        await axios.post('https://mentoringtoolserver.onrender.com/form-value', { formID })
             .then((response) => {
                 setFormValue(response.data.formValue)
             })
