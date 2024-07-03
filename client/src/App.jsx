@@ -10,7 +10,7 @@ const App = () => {
 
   const getFormData = async (item) => {
     await axios
-      .post('http://localhost:5000/form-id', { item })
+      .post('https://mentoringtoolclient.onrender.com/form-id', { item })
       .then((response) => {
         console.log(response)
         setFormData(response)
