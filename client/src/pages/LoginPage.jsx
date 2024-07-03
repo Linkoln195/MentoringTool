@@ -10,7 +10,7 @@ const Login = () => {
     const onFinish = (values) => {
         console.log('Success:', values);
         axios
-            .post('http://localhost:5000/login', values)
+            .post('https://mentoringtoolserver.onrender.com/login', values)
             .then(async (response) => {
                 response = response.data
                 await localStorage.setItem('mentorID', response);
