@@ -19,8 +19,8 @@ const App = () => {
 
   return (
     <Routes>
-      <Route path="/home" element={<Home getFormData={getFormData} />}></Route>
       <Route path="/" element={<Login />}></Route>
+      <Route path="/home" element={<Home getFormData={getFormData} />}></Route>
       <Route path="/form" element={<Form formData={formData} />}></Route>
     </Routes>)
 
