@@ -29,11 +29,11 @@ const Home = (getFormData) => {
             name: item,
             id: localStorage.getItem('mentorID')
         }
-        await axios.post('http://localhost:5000/new-mentor', item).then(getData())
+        await axios.post('https://mentoringtoolclient.onrender.com/new-mentor', item).then(getData())
     }
 
     const onDeleteClick = async (item) => {
-        await axios.post('http://localhost:5000/delete-menti', { item }).then(getData())
+        await axios.post('https://mentoringtoolclient.onrender.com/delete-menti', { item }).then(getData())
     }
 
     return (
