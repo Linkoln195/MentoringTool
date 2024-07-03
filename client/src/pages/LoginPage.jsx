@@ -14,7 +14,7 @@ const Login = () => {
             .then(async (response) => {
                 response = response.data
                 await localStorage.setItem('mentorID', response);
-                location.href = 'https://mentoringtoolclient.onrender.com/home'
+                location.href = 'http://localhost:5173/home'
             })
             .catch((error) => {
                 messageApi.open({
