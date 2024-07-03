@@ -19,9 +19,9 @@ const App = () => {
 
   return (
     <Routes>
-      <Route path="https://mentoringtoolclient.onrender.com/" element={<Login />}></Route>
-      <Route path="https://mentoringtoolclient.onrender.com/home" element={<Home getFormData={getFormData} />}></Route>
-      <Route path="https://mentoringtoolclient.onrender.com/form" element={<Form formData={formData} />}></Route>
+      <Route path="/" element={<Login />}></Route>
+      <Route path="/home" element={<Home getFormData={getFormData} />}></Route>
+      <Route path="/form" element={<Form formData={formData} />}></Route>
     </Routes>)
 
 }
