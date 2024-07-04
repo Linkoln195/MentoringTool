@@ -1,4 +1,4 @@
-const newMentor = async (request, response, client) => {
+const deleteMenti = async (request, response, client) => {
     const db = client.db("MentoringTool");
     const collection = db.collection("mentis");
     console.log(request.body);
@@ -11,4 +11,4 @@ const newMentor = async (request, response, client) => {
     );
 };
 
-module.exports = newMentor;
+module.exports = deleteMenti;
